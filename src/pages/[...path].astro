@@ -5,6 +5,7 @@ export function getStaticPaths() {
     {params: {path: 'page1'}}
   ]
 }
+const bgColor = 'aquamarine'
 ---
 
 <html lang="en">
@@ -19,3 +20,7 @@ export function getStaticPaths() {
 		<h1>Astro</h1>
 	</body>
 </html>
+
+<style lang="scss" define:vars={{ bgColor }}>
+	body {background-color: var(--bgColor);}
+</style>
